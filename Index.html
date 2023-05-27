@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="x-icon"
+    href="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/6094cc7cc641f6eb162f156f_32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AntiDo+E</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=JetBrains+Mono:wght@100&family=Montserrat&family=Roboto+Condensed:wght@300&display=swap');
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Style.css">
+
+</head>
+
+<body>
+  <!-------- NAVBAR ---------->
+
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" id="top-nav">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#" id="nav-title">ANTIDO+E</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto" id="nav-items">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Pricing</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Giannis Antetokounmpo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Giannis</a></li>
+              <li><a class="dropdown-item" href="#">Caff Collaboration</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Health Service
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <button type="button" class="btn btn-primary  " data-bs-toggle="modal" data-bs-target="#loginModal">Sign
+            In</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-------- LOGIN MODAL ---------->
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="signinModal-btn">Sign in</button> <br> <br>
+            <button type="submit" class="btn btn-primary " id="loginModal-btn">Log in with One-time Code</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-------- Carousel ---------->
+  <section class="corousel">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleAutoplaying" class="carousel slide col-12" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://cdn.pixabay.com/photo/2020/08/14/23/33/child-5489290_960_720.jpg" class="d-block w-100"
+                alt="no-img" >
+              <div class="carousel-caption d-none d-md-block" id="carousel-caption-1">
+                <h5>Get expert health care <br> anytime, anywhere</h5>
+                <p>From treating everyday aches and pains <br> to the ongoing management of chronic conditions, <br> Antidote
+                  offers a
+                  health care service that’s right for you.</p>
+              </div>
+            </div>
+            <div class="carousel-item"  >
+              <img
+                src="https://www.thebalancemoney.com/thmb/9NdBsZCYvXhzZEidg74OKvMY1U4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-181214629-5e17e8aa09ec49fea09195368828b142.jpg"
+                class="d-block img-fluid w-100" alt="no-img" >
+              <div class="carousel-caption d-none d-md-block" id="carousel-caption-2">
+                <img
+                  src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy.png"
+                  loading="lazy" sizes="(max-width: 767px) 92vw, 459.9921875px"
+                  srcset="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy-p-500.png 500w, https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy-p-800.png 800w, https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy-p-1080.png 1080w, https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy-p-1600.png 1600w, https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy-p-2000.png 2000w, https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f28dd1cbc47f359306d9ba_ANTIDOTE%2BGIANNIS_Care%20For%20All%20LockUp%20copy.png 2048w"
+                  alt="no-img" class="img-fluid">
+                <h5 id="c-item-h5">We’re partnering with
+                  ‍ GIANNIS ANTETOKOUNMPO
+                  to change the game of healthcare.</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-------- HEALTH SERVICE ---------->
+  <section class="health-service">
+    <div class="container-fluid">
+
+      <div class="row d-flex justify-content-center pt-md-5 pb-md-5 pt-sm-2 pb-sm-2" id="health-service">
+        <div class="col-12 text-center pb-5 " id="health-service-title">
+          <h1 style="font-weight: bolder;">Health Service</h1>
+        </div>
+        <div class=" col-md-2 col-sm-3 card h-100 text-center pt-md-3 pt-sm-1" style="width: 20rem;" id="health-service-cards">
+          <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62ece47c17fa633bac843f26_1.svg"
+            class="card-img-top img-fluid" style="height: 7.5rem;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Primary Care</h5>
+            <p class="card-text">From colds to allergies, infections and everything in between, our licensed clinicians
+              are
+              available 24/7</p>
+            <a href="#" class="btn">Get Started</a>
+            <h6>Learn More ></h6>
+          </div>
+        </div>
+
+        <div class="col-md-2 card h-100 text-center pt-md-3 pt-sm-1" style="width: 20rem;" id="health-service-cards">
+          <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f4e57e3ef149bfe3b957f6_1.svg"
+            class="card-img-top img-fluid" style="height: 7.5rem;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mental Health</h5>
+            <p class="card-text">Starting with a mental health assessment, our doctors will create a treatment plan to
+              help
+              you shine</p>
+            <a href="#" class="btn ">Get Started</a>
+            <h6>Learn More ></h6>
+          </div>
+        </div>
+
+        <div class="col-md-2 card h-100 text-center pt-md-3 pt-sm-1" style="width: 20rem;" id="health-service-cards">
+          <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62ece49d17fa63366584586b_3.svg"
+            class="card-img-top img-fluid" style="height: 7.5rem;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Hypertension Care</h5>
+            <p class="card-text">Take control of your blood pressure with medication, treatment and ongoing support.</p>
+            <a href="#" class="btn">Get Started</a>
+            <h6>Learn More ></h6>
+          </div>
+        </div>
+
+        <div class=" col-md-2 card h-100 text-center pt-md-3 pt-sm-1" style="width: 20rem;" id="health-service-cards">
+          <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/6339b4c4689e38148baa4412_1.svg"
+            class="card-img-top img-fluid" style="height: 7.5rem;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Diabetes Care</h5>
+            <p class="card-text">Type 2 Diabetes management is made simple with medication, treatment and ongoing
+              support.
+            </p>
+            <a href="#" class="btn">Get Started</a>
+            <h6>Learn More ></h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-------- HOW IT WORKS ---------->
+  <section class="how-it-works">
+    <div class=" container-fluid justify-content-center text-center pt-md-5 pb-md-5" id="how-it-works">
+      <div class="row col-7 pt-md-5 pb-5 pt-sm-2 " style="background-color: white; " id="how-it-works-bg">
+        <h2>How It Works</h2>
+        <h6>Getting started on your health care journey</h6>
+        <div class="col-md-4" id="how-it-works-card">
+          <div class="card h-100 p-md-3 p-sm-1 ">
+            <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62ecea0a08e2d844ae2d1e6a_4.svg"
+              class="card-img-top img-fluid" style="height: 4.5rem;" alt="...">
+            <div class="card-body">
+              <h5>1</h5>
+              <p class="card-text">Select the health care
+                service that’s right for you</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" id="how-it-works-card">
+          <div class="card h-100 p-md-3 p-sm-1">
+            <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62eceaa951782c584f42ad55_5.svg"
+              style="height: 4.5rem;" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5>2</h5>
+              <p class="card-text">Create an account and answer
+                a few easy medical questions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" id="how-it-works-card">
+          <div class="card h-100 p-md-3 p-sm-1">
+            <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62eceac208e2d8a93e2d2188_6.svg"
+              style=" height: 4rem;" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5>3</h5>
+              <p class="card-text">Schedule your telehealth visit
+                or see a clinician right away
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-------- RATINGS ---------->
+  <section class="ratings">
+    <div class="container-fluid">
+      <div class="row justify-content-center pt-md-5 pb-md-5 " id="rating">
+        <div class="col-md-12 text-center" id="rating-text">
+          <svg width="140" height="30" viewBox="0 0 140 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12.2339 6.91821C12.8673 4.96873 15.6253 4.96873 16.2587 6.91821L16.9697 9.10644C17.253 9.97827 18.0654 10.5686 18.9821 10.5686H21.283C23.3328 10.5686 24.1851 13.1916 22.5267 14.3964L20.6653 15.7488C19.9237 16.2876 19.6133 17.2427 19.8966 18.1146L20.6076 20.3028C21.241 22.2523 19.0098 23.8734 17.3515 22.6685L15.49 21.3161C14.7484 20.7773 13.7442 20.7773 13.0025 21.3161L11.1411 22.6685C9.4828 23.8734 7.25153 22.2523 7.88495 20.3028L8.59595 18.1146C8.87923 17.2427 8.5689 16.2876 7.82728 15.7488L5.96586 14.3964C4.30753 13.1916 5.1598 10.5686 7.2096 10.5686H9.51044C10.4271 10.5686 11.2396 9.97828 11.5229 9.10644L12.2339 6.91821Z"
+              fill="#FB6F55"></path>
+            <path
+              d="M40.0698 6.91821C40.7032 4.96873 43.4612 4.96873 44.0947 6.91821L44.8056 9.10644C45.0889 9.97827 45.9014 10.5686 46.8181 10.5686H49.1189C51.1687 10.5686 52.021 13.1916 50.3627 14.3964L48.5012 15.7488C47.7596 16.2876 47.4493 17.2427 47.7326 18.1146L48.4436 20.3028C49.077 22.2523 46.8457 23.8734 45.1874 22.6685L43.326 21.3161C42.5843 20.7773 41.5801 20.7773 40.8385 21.3161L38.9771 22.6685C37.3187 23.8734 35.0875 22.2523 35.7209 20.3028L36.4319 18.1146C36.7152 17.2427 36.4048 16.2876 35.6632 15.7488L33.8018 14.3964C32.1435 13.1916 32.9957 10.5686 35.0455 10.5686H37.3464C38.2631 10.5686 39.0755 9.97828 39.3588 9.10644L40.0698 6.91821Z"
+              fill="#FB6F55"></path>
+            <path
+              d="M67.9038 6.91821C68.5372 4.96873 71.2952 4.96873 71.9286 6.91821L72.6396 9.10644C72.9229 9.97827 73.7354 10.5686 74.6521 10.5686H76.9529C79.0027 10.5686 79.855 13.1916 78.1966 14.3964L76.3352 15.7488C75.5936 16.2876 75.2833 17.2427 75.5665 18.1146L76.2775 20.3028C76.911 22.2523 74.6797 23.8734 73.0214 22.6685L71.16 21.3161C70.4183 20.7773 69.4141 20.7773 68.6725 21.3161L66.811 22.6685C65.1527 23.8734 62.9215 22.2523 63.5549 20.3028L64.2659 18.1146C64.5492 17.2427 64.2388 16.2876 63.4972 15.7488L61.6358 14.3964C59.9775 13.1916 60.8297 10.5686 62.8795 10.5686H65.1804C66.0971 10.5686 66.9095 9.97828 67.1928 9.10644L67.9038 6.91821Z"
+              fill="#FB6F55"></path>
+            <path
+              d="M95.7378 6.91821C96.3712 4.96873 99.1292 4.96873 99.7626 6.91821L100.474 9.10644C100.757 9.97827 101.569 10.5686 102.486 10.5686H104.787C106.837 10.5686 107.689 13.1916 106.031 14.3964L104.169 15.7488C103.428 16.2876 103.117 17.2427 103.401 18.1146L104.112 20.3028C104.745 22.2523 102.514 23.8734 100.855 22.6685L98.9939 21.3161C98.2523 20.7773 97.2481 20.7773 96.5064 21.3161L94.645 22.6685C92.9867 23.8734 90.7554 22.2523 91.3889 20.3028L92.0999 18.1146C92.3831 17.2427 92.0728 16.2876 91.3312 15.7488L89.4698 14.3964C87.8114 13.1916 88.6637 10.5686 90.7135 10.5686H93.0143C93.931 10.5686 94.7435 9.97828 95.0268 9.10644L95.7378 6.91821Z"
+              fill="#FB6F55"></path>
+            <path
+              d="M123.574 6.91821C124.207 4.96873 126.965 4.96873 127.599 6.91821L128.31 9.10644C128.593 9.97827 129.405 10.5686 130.322 10.5686H132.623C134.673 10.5686 135.525 13.1916 133.867 14.3964L132.005 15.7488C131.264 16.2876 130.953 17.2427 131.236 18.1146L131.947 20.3028C132.581 22.2523 130.35 23.8734 128.691 22.6685L126.83 21.3161C126.088 20.7773 125.084 20.7773 124.342 21.3161L122.481 22.6685C120.823 23.8734 118.591 22.2523 119.225 20.3028L119.936 18.1146C120.219 17.2427 119.909 16.2876 119.167 15.7488L117.306 14.3964C115.647 13.1916 116.5 10.5686 118.549 10.5686H120.85C121.767 10.5686 122.579 9.97828 122.863 9.10644L123.574 6.91821Z"
+              fill="#FB6F55"></path>
+          </svg>
+          <h1 id="rating-headline">Patients Love Using Antidote Health</h1>
+        </div>
+        <div class="col-md-3  " id="rating-card">
+          <div class="card h-100 pt-md-3">
+            <svg width="90" height="19" viewBox="0 0 90 19" fill="none" style="align-self: center;"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.47313 2.60739C8.69225 1.93301 9.64632 1.93301 9.86544 2.60739L11.0636 6.29487C11.1616 6.59647 11.4426 6.80066 11.7597 6.80066H15.637C16.3461 6.80066 16.6409 7.70804 16.0672 8.12483L12.9305 10.4038C12.6739 10.5902 12.5666 10.9206 12.6646 11.2222L13.8627 14.9097C14.0818 15.5841 13.31 16.1449 12.7363 15.7281L9.59953 13.4491C9.34298 13.2627 8.99558 13.2627 8.73903 13.4491L5.60227 15.7281C5.02861 16.1449 4.25675 15.5841 4.47587 14.9097L5.674 11.2222C5.772 10.9206 5.66465 10.5902 5.4081 10.4038L2.27134 8.12483C1.69767 7.70804 1.99249 6.80066 2.70158 6.80066H6.57883C6.89595 6.80066 7.177 6.59647 7.27499 6.29487L8.47313 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M26.3872 2.60739C26.6063 1.93301 27.5604 1.93301 27.7795 2.60739L28.9776 6.29487C29.0756 6.59647 29.3567 6.80066 29.6738 6.80066H33.551C34.2601 6.80066 34.555 7.70804 33.9813 8.12483L30.8445 10.4038C30.588 10.5902 30.4806 10.9206 30.5786 11.2222L31.7768 14.9097C31.9959 15.5841 31.224 16.1449 30.6504 15.7281L27.5136 13.4491C27.257 13.2627 26.9096 13.2627 26.6531 13.4491L23.5163 15.7281C22.9427 16.1449 22.1708 15.5841 22.3899 14.9097L23.5881 11.2222C23.6861 10.9206 23.5787 10.5902 23.3222 10.4038L20.1854 8.12483C19.6117 7.70804 19.9066 6.80066 20.6156 6.80066H24.4929C24.81 6.80066 25.0911 6.59647 25.1891 6.29487L26.3872 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M44.3052 2.60739C44.5243 1.93301 45.4783 1.93301 45.6975 2.60739L46.8956 6.29487C46.9936 6.59647 47.2746 6.80066 47.5918 6.80066H51.469C52.1781 6.80066 52.4729 7.70804 51.8993 8.12483L48.7625 10.4038C48.5059 10.5902 48.3986 10.9206 48.4966 11.2222L49.6947 14.9097C49.9138 15.5841 49.142 16.1449 48.5683 15.7281L45.4316 13.4491C45.175 13.2627 44.8276 13.2627 44.5711 13.4491L41.4343 15.7281C40.8606 16.1449 40.0888 15.5841 40.3079 14.9097L41.506 11.2222C41.604 10.9206 41.4967 10.5902 41.2401 10.4038L38.1034 8.12483C37.5297 7.70804 37.8245 6.80066 38.5336 6.80066H42.4109C42.728 6.80066 43.009 6.59647 43.107 6.29487L44.3052 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M62.2192 2.60739C62.4383 1.93301 63.3924 1.93301 63.6115 2.60739L64.8097 6.29487C64.9077 6.59647 65.1887 6.80066 65.5058 6.80066H69.3831C70.0922 6.80066 70.387 7.70804 69.8133 8.12483L66.6766 10.4038C66.42 10.5902 66.3127 10.9206 66.4107 11.2222L67.6088 14.9097C67.8279 15.5841 67.056 16.1449 66.4824 15.7281L63.3456 13.4491C63.0891 13.2627 62.7417 13.2627 62.4851 13.4491L59.3484 15.7281C58.7747 16.1449 58.0028 15.5841 58.222 14.9097L59.4201 11.2222C59.5181 10.9206 59.4107 10.5902 59.1542 10.4038L56.0174 8.12483C55.4438 7.70804 55.7386 6.80066 56.4477 6.80066H60.3249C60.642 6.80066 60.9231 6.59647 61.0211 6.29487L62.2192 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M80.1333 2.60739C80.3524 1.93301 81.3065 1.93301 81.5256 2.60739L82.7237 6.29487C82.8217 6.59647 83.1028 6.80066 83.4199 6.80066H87.2971C88.0062 6.80066 88.301 7.70804 87.7274 8.12483L84.5906 10.4038C84.3341 10.5902 84.2267 10.9206 84.3247 11.2222L85.5229 14.9097C85.742 15.5841 84.9701 16.1449 84.3964 15.7281L81.2597 13.4491C81.0031 13.2627 80.6557 13.2627 80.3992 13.4491L77.2624 15.7281C76.6888 16.1449 75.9169 15.5841 76.136 14.9097L77.3342 11.2222C77.4322 10.9206 77.3248 10.5902 77.0683 10.4038L73.9315 8.12483C73.3578 7.70804 73.6527 6.80066 74.3617 6.80066H78.239C78.5561 6.80066 78.8372 6.59647 78.9351 6.29487L80.1333 2.60739Z"
+                fill="#FB6F55"></path>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">“Very helpful physician. She listened to what I had to say. Gave good advice. A much
+                more
+                relaxed way to speak with a doctor.”</p>
+              <h6>Stacy Price</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" id="rating-card">
+          <div class="card h-100 pt-md-3">
+            <svg width="90" height="19" viewBox="0 0 90 19" fill="none" style="align-self: center;"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.47313 2.60739C8.69225 1.93301 9.64632 1.93301 9.86544 2.60739L11.0636 6.29487C11.1616 6.59647 11.4426 6.80066 11.7597 6.80066H15.637C16.3461 6.80066 16.6409 7.70804 16.0672 8.12483L12.9305 10.4038C12.6739 10.5902 12.5666 10.9206 12.6646 11.2222L13.8627 14.9097C14.0818 15.5841 13.31 16.1449 12.7363 15.7281L9.59953 13.4491C9.34298 13.2627 8.99558 13.2627 8.73903 13.4491L5.60227 15.7281C5.02861 16.1449 4.25675 15.5841 4.47587 14.9097L5.674 11.2222C5.772 10.9206 5.66465 10.5902 5.4081 10.4038L2.27134 8.12483C1.69767 7.70804 1.99249 6.80066 2.70158 6.80066H6.57883C6.89595 6.80066 7.177 6.59647 7.27499 6.29487L8.47313 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M26.3872 2.60739C26.6063 1.93301 27.5604 1.93301 27.7795 2.60739L28.9776 6.29487C29.0756 6.59647 29.3567 6.80066 29.6738 6.80066H33.551C34.2601 6.80066 34.555 7.70804 33.9813 8.12483L30.8445 10.4038C30.588 10.5902 30.4806 10.9206 30.5786 11.2222L31.7768 14.9097C31.9959 15.5841 31.224 16.1449 30.6504 15.7281L27.5136 13.4491C27.257 13.2627 26.9096 13.2627 26.6531 13.4491L23.5163 15.7281C22.9427 16.1449 22.1708 15.5841 22.3899 14.9097L23.5881 11.2222C23.6861 10.9206 23.5787 10.5902 23.3222 10.4038L20.1854 8.12483C19.6117 7.70804 19.9066 6.80066 20.6156 6.80066H24.4929C24.81 6.80066 25.0911 6.59647 25.1891 6.29487L26.3872 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M44.3052 2.60739C44.5243 1.93301 45.4783 1.93301 45.6975 2.60739L46.8956 6.29487C46.9936 6.59647 47.2746 6.80066 47.5918 6.80066H51.469C52.1781 6.80066 52.4729 7.70804 51.8993 8.12483L48.7625 10.4038C48.5059 10.5902 48.3986 10.9206 48.4966 11.2222L49.6947 14.9097C49.9138 15.5841 49.142 16.1449 48.5683 15.7281L45.4316 13.4491C45.175 13.2627 44.8276 13.2627 44.5711 13.4491L41.4343 15.7281C40.8606 16.1449 40.0888 15.5841 40.3079 14.9097L41.506 11.2222C41.604 10.9206 41.4967 10.5902 41.2401 10.4038L38.1034 8.12483C37.5297 7.70804 37.8245 6.80066 38.5336 6.80066H42.4109C42.728 6.80066 43.009 6.59647 43.107 6.29487L44.3052 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M62.2192 2.60739C62.4383 1.93301 63.3924 1.93301 63.6115 2.60739L64.8097 6.29487C64.9077 6.59647 65.1887 6.80066 65.5058 6.80066H69.3831C70.0922 6.80066 70.387 7.70804 69.8133 8.12483L66.6766 10.4038C66.42 10.5902 66.3127 10.9206 66.4107 11.2222L67.6088 14.9097C67.8279 15.5841 67.056 16.1449 66.4824 15.7281L63.3456 13.4491C63.0891 13.2627 62.7417 13.2627 62.4851 13.4491L59.3484 15.7281C58.7747 16.1449 58.0028 15.5841 58.222 14.9097L59.4201 11.2222C59.5181 10.9206 59.4107 10.5902 59.1542 10.4038L56.0174 8.12483C55.4438 7.70804 55.7386 6.80066 56.4477 6.80066H60.3249C60.642 6.80066 60.9231 6.59647 61.0211 6.29487L62.2192 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M80.1333 2.60739C80.3524 1.93301 81.3065 1.93301 81.5256 2.60739L82.7237 6.29487C82.8217 6.59647 83.1028 6.80066 83.4199 6.80066H87.2971C88.0062 6.80066 88.301 7.70804 87.7274 8.12483L84.5906 10.4038C84.3341 10.5902 84.2267 10.9206 84.3247 11.2222L85.5229 14.9097C85.742 15.5841 84.9701 16.1449 84.3964 15.7281L81.2597 13.4491C81.0031 13.2627 80.6557 13.2627 80.3992 13.4491L77.2624 15.7281C76.6888 16.1449 75.9169 15.5841 76.136 14.9097L77.3342 11.2222C77.4322 10.9206 77.3248 10.5902 77.0683 10.4038L73.9315 8.12483C73.3578 7.70804 73.6527 6.80066 74.3617 6.80066H78.239C78.5561 6.80066 78.8372 6.59647 78.9351 6.29487L80.1333 2.60739Z"
+                fill="#FB6F55"></path>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">“Great service doctor was compassionate, empathetic asked plenty of questions and was
+                very helpful.”</p>
+              <h6 style="padding-top: 1.25rem;">a_4_angel</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" id="rating-card">
+          <div class="card h-100 pt-md-3">
+            <svg width="90" height="19" viewBox="0 0 90 19" fill="none" style="align-self: center;"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.47313 2.60739C8.69225 1.93301 9.64632 1.93301 9.86544 2.60739L11.0636 6.29487C11.1616 6.59647 11.4426 6.80066 11.7597 6.80066H15.637C16.3461 6.80066 16.6409 7.70804 16.0672 8.12483L12.9305 10.4038C12.6739 10.5902 12.5666 10.9206 12.6646 11.2222L13.8627 14.9097C14.0818 15.5841 13.31 16.1449 12.7363 15.7281L9.59953 13.4491C9.34298 13.2627 8.99558 13.2627 8.73903 13.4491L5.60227 15.7281C5.02861 16.1449 4.25675 15.5841 4.47587 14.9097L5.674 11.2222C5.772 10.9206 5.66465 10.5902 5.4081 10.4038L2.27134 8.12483C1.69767 7.70804 1.99249 6.80066 2.70158 6.80066H6.57883C6.89595 6.80066 7.177 6.59647 7.27499 6.29487L8.47313 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M26.3872 2.60739C26.6063 1.93301 27.5604 1.93301 27.7795 2.60739L28.9776 6.29487C29.0756 6.59647 29.3567 6.80066 29.6738 6.80066H33.551C34.2601 6.80066 34.555 7.70804 33.9813 8.12483L30.8445 10.4038C30.588 10.5902 30.4806 10.9206 30.5786 11.2222L31.7768 14.9097C31.9959 15.5841 31.224 16.1449 30.6504 15.7281L27.5136 13.4491C27.257 13.2627 26.9096 13.2627 26.6531 13.4491L23.5163 15.7281C22.9427 16.1449 22.1708 15.5841 22.3899 14.9097L23.5881 11.2222C23.6861 10.9206 23.5787 10.5902 23.3222 10.4038L20.1854 8.12483C19.6117 7.70804 19.9066 6.80066 20.6156 6.80066H24.4929C24.81 6.80066 25.0911 6.59647 25.1891 6.29487L26.3872 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M44.3052 2.60739C44.5243 1.93301 45.4783 1.93301 45.6975 2.60739L46.8956 6.29487C46.9936 6.59647 47.2746 6.80066 47.5918 6.80066H51.469C52.1781 6.80066 52.4729 7.70804 51.8993 8.12483L48.7625 10.4038C48.5059 10.5902 48.3986 10.9206 48.4966 11.2222L49.6947 14.9097C49.9138 15.5841 49.142 16.1449 48.5683 15.7281L45.4316 13.4491C45.175 13.2627 44.8276 13.2627 44.5711 13.4491L41.4343 15.7281C40.8606 16.1449 40.0888 15.5841 40.3079 14.9097L41.506 11.2222C41.604 10.9206 41.4967 10.5902 41.2401 10.4038L38.1034 8.12483C37.5297 7.70804 37.8245 6.80066 38.5336 6.80066H42.4109C42.728 6.80066 43.009 6.59647 43.107 6.29487L44.3052 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M62.2192 2.60739C62.4383 1.93301 63.3924 1.93301 63.6115 2.60739L64.8097 6.29487C64.9077 6.59647 65.1887 6.80066 65.5058 6.80066H69.3831C70.0922 6.80066 70.387 7.70804 69.8133 8.12483L66.6766 10.4038C66.42 10.5902 66.3127 10.9206 66.4107 11.2222L67.6088 14.9097C67.8279 15.5841 67.056 16.1449 66.4824 15.7281L63.3456 13.4491C63.0891 13.2627 62.7417 13.2627 62.4851 13.4491L59.3484 15.7281C58.7747 16.1449 58.0028 15.5841 58.222 14.9097L59.4201 11.2222C59.5181 10.9206 59.4107 10.5902 59.1542 10.4038L56.0174 8.12483C55.4438 7.70804 55.7386 6.80066 56.4477 6.80066H60.3249C60.642 6.80066 60.9231 6.59647 61.0211 6.29487L62.2192 2.60739Z"
+                fill="#FB6F55"></path>
+              <path
+                d="M80.1333 2.60739C80.3524 1.93301 81.3065 1.93301 81.5256 2.60739L82.7237 6.29487C82.8217 6.59647 83.1028 6.80066 83.4199 6.80066H87.2971C88.0062 6.80066 88.301 7.70804 87.7274 8.12483L84.5906 10.4038C84.3341 10.5902 84.2267 10.9206 84.3247 11.2222L85.5229 14.9097C85.742 15.5841 84.9701 16.1449 84.3964 15.7281L81.2597 13.4491C81.0031 13.2627 80.6557 13.2627 80.3992 13.4491L77.2624 15.7281C76.6888 16.1449 75.9169 15.5841 76.136 14.9097L77.3342 11.2222C77.4322 10.9206 77.3248 10.5902 77.0683 10.4038L73.9315 8.12483C73.3578 7.70804 73.6527 6.80066 74.3617 6.80066H78.239C78.5561 6.80066 78.8372 6.59647 78.9351 6.29487L80.1333 2.60739Z"
+                fill="#FB6F55"></path>
+            </svg>
+            <div class="card-body">
+              <p class="card-text">“Excellent service with quick results, couldn't be happier”</p>
+              <h6 class="" style="padding-top: 4.0625rem;">William Hull</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-------- DOCTORS PROFILE ---------->
+  <section class="doctors-profile">
+    <div class="container-fluid">
+      <div class="row justify-content-center text-center pt-md-5 pb-md-5" id="doc-profile">
+        <div class="col-md-12 text-center" id="doc-profile-title">
+          <h1>Meet some of our highly trained board certified clinicians</h1>
+        </div>
+        <div class="col-md-2 pt-md-4" id="doc-profile-card">
+          <div class="card " id="doc-profile-img">
+            <img src="./images/d1.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="card-body" id="doc-profile-text">
+            <h5 class="card-text pt-md-3">Dr. Zev Davidovics</h5>
+            <p>Pediatric Gastroenterology</p>
+          </div>
+        </div>
+        <div class="col-md-2 pt-md-4" id="doc-profile-card">
+          <div class="card" id="doc-profile-img">
+            <img src="./images/d3.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="card-body" id="doc-profile-text">
+            <h5 class="card-text pt-md-3">Dr. Rachel McDowell
+            </h5>
+            <p>Emergency Medicine</p>
+          </div>
+        </div>
+        <div class="col-md-2 pt-md-4" id="doc-profile-card">
+          <div class="card" id="doc-profile-img">
+            <img src="./images/d4.jpg" class="img-fluid" alt="...">
+          </div>
+          <div class="card-body" id="doc-profile-text">
+            <h5 class="card-text pt-md-3">Dr. Lindsay Agolia
+            </h5>
+            <p>Family Medicine</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-------- HELP TODAY ---------->
+  <section class="help-today">
+    <div class="container-fluid">
+      <div class="row justify-content-center text-center pb-md-5" id="help">
+        <div class="col-md-6 pt-md-5" id="help-content">
+          <span id="help-content-title">What Can We Help You With Today?</span>
+          <div class="row align-items-start pt-md-4 text-center">
+            <div class="col-6" id="help-content-col">
+              <a href="">+ Mental Health</a>
+              <a href="">+ Prescriptions and Refills</a>
+              <a href="">+ Poison Ivy, Poison Oak, & Sumac</a>
+              <a href="">+ Prescription Birth Control Pills</a>
+              <a href="">+ Cold and Flu Treatment</a>
+              <a href="">+ Tick Bite Treatment </a>
+              <a href="">+ Yeast Infection Treatment</a>
+              <a href="">+ Urinary Tract Infection (UTI) Treatment</a>
+            </div>
+            <div class="col-6" id="help-content-col">
+              <a href="">+ Hypertension Care</a>
+              <a href="">+ Primary Care</a>
+              <a href="">+ Sinus Infection</a>
+              <a href="">+ Constipation Treatment</a>
+              <a href="">+ Cold Sore Treatment</a>
+              <a href="">+ Acid Reflux Treatment </a>
+              <a href="">+ Treatment for Pinworms</a>
+            </div>
+          </div>
+        </div>
+
+        <img class="col-md-6" id="help-img"
+          src="https://s3.ap-south-1.amazonaws.com/healthinsurances3.com/prod/imagegallery/Which-Is-The-Best-Term-Insurance-Plan-For-Mothers.jpg"
+          class="img-fluid" alt="no-img">
+
+        <div class="col-12" id="help-text">
+          <p>
+            Insurance Disclaimer: Antidote is not an insurer and does not provide insurance products. This service is
+            not a
+            substitute for comprehensive health care insurance coverage. If you desire any type of health insurance, you
+            must purchase such insurance separately, from licensed insurance companies.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-------- FOOTER ---------->
+  <footer class="pt-3" id="footer">
+    <div class="row">
+
+      <div class="col-6 col-md-2 mb-3" id="footer-img">
+        <ul class="nav flex-column">
+          <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f299f1df04387585eecd09_1.svg" alt="...">
+          <br> <br>
+          <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f299ca33f54537132a9a2e_2.svg" alt="...">
+          <img src="	https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f299df5cac0a1c519ece39_3.svg" alt="...">
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-1 mb-3 " id="footer-row">
+        <h5>About</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Care for All</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Join our Community</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Testimonials</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Resourse</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Newsroom</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-1 mb-3" id="footer-row">
+        <h5>Our Service</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">How it works</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Where we operate</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Packages and Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Family Plan</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Antidote Spend Card</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Virtual Spend Card</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> Prescription Service</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Mental Health</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-1 mb-3" id="footer-row">
+        <h5>Legal</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Use</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Use | Subscription</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Use | Coupon codes</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Use | Gifting</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Medical Note Policy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Web Accessibility</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-1 mb-3" id="footer-row">
+        <h5>Get In touch</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">1-866-256-2134</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">support@antidotehealth.com</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">1460 Broadway St
+              New York, NY
+              10036 USA</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-md-2 offset-md-1 mb-3" id="footer-search">
+        <form>
+          <ul class="list-unstyled d-flex " id="footer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-meta"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+            </svg>
+          </ul>
+          <h6>Subscribe to our newsletter</h6>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2" id="news-letter">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-logos-wrapper" id="footer-logo">
+      <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f29a07150fefbf5902a6e3_4.png"
+        loading="lazy" width="45" height="45" alt="Accessibe">
+      <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f29a163498672f9123551b_5.png"
+        loading="lazy" width="45" height="45" alt="">
+      <img src="https://global-uploads.webflow.com/60914e89a63c810c146e77a3/62f3e09486515c1cf62686d5_Group%2026869.png"
+        loading="lazy" width="75" id="w-node-_109f62bd-1613-f7d8-ea38-4f05eb1f8665-b51613ea" alt="">
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between pb-2 my-4 border-top">
+      <p>© 2023 Company, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+   * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       overflow-x: hidden;
+   }
+
+
+
+
+   /***** NAVBAR ******/
+   #top-nav {
+       background-color: #131313 !important;
+       padding: 0.8% 8%;
+       width: 100%;
+       font-family: 'Montserrat', sans-serif;
+       display: flex;
+       align-items: center;
+       text-transform: uppercase;
+   }
+
+   #top-nav a {
+       color: white;
+       padding-right: 1rem;
+   }
+
+   #nav-title {
+       font-size: 2rem;
+       font-weight: bolder;
+   }
+
+   .navbar-toggler-icon {
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2855, 255, 41, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+   }
+
+   .navbar-toggler {
+       border: 1px solid rgba(124, 232, 178, 0.333);
+   }
+
+   @media only screen and (max-width:1300px) {
+       #nav-items {
+           font-size: .75rem;
+       }
+   }
+
+   /* LOGIN MODAL */
+   #signinModal-btn {
+       margin-left: 40%
+   }
+
+   #loginModal-btn {
+       margin-left: 25%;
+   }
+
+
+   /***** CARROUSEL ******/
+
+   .carousel {
+       padding-top: 3.625rem !important;
+       width: 100%;
+       padding-left: 0 !important;
+       padding-right: 0 !important;
+       /* height: 80%; */
+   }
+
+   #carousel-caption-1 {
+       position: absolute;
+       top: 10%;
+       left: 55%;
+       color: darkcyan;
+   }
+
+   #carousel-caption-2 {
+       position: absolute;
+       top: 10%;
+       left: 60%;
+   }
+
+   #carousel-caption-1 h5 {
+       color: rgb(142, 126, 34);
+       font-size: 3rem;
+       font-weight: 1000;
+   }
+   #c-item-h5{
+    color:darkblue;
+   }
+
+
+   /***** HEALTH SERVICE ******/
+
+   .health-service {
+       font-family: 'Montserrat', sans-serif;
+       
+   }
+
+   #health-service-title {
+       font-weight: 900px;
+   }
+
+   #health-service-cards {
+       border: none;
+   }
+
+   #health-service a {
+       background-color: #FB6F55;
+       color: white;
+
+   }
+
+   #health-service h5 {
+       font-weight: 600;
+       padding-bottom: 0.625rem;
+   }
+
+   #health-service h6 {
+       padding-top: 0.625rem;
+   }
+
+
+   /***** HOW IT WORKS ******/
+
+   #how-it-works {
+       background-color: #FB6F55;
+       /* z-index: -1; */
+       width: 100%;
+       justify-content: center;
+       align-items: center;
+
+   }
+
+   #how-it-works img {
+       align-content: center;
+   }
+
+   #how-it-works h2,
+   h5 {
+       font-family: 'Montserrat', sans-serif;
+   }
+
+   #how-it-works h2 {
+       font-weight: 600;
+   }
+
+   #how-it-works-bg {
+       z-index: 1;
+       border-top-left-radius: 3.125rem;
+       border-bottom-right-radius: 3.125rem;
+       margin: auto;
+
+   }
+
+   #how-it-works-card div {
+       z-index: 2;
+       border: none;
+   }
+
+   @media only screen and (max-width:1000px) {
+
+       #how-it-works-card,
+       #rating-card {
+           font-size: 0.9375rem;
+       }
+
+   }
+
+
+   /***** RATINGS ******/
+   #rating {
+       background-color: #fbf7f2;
+       font-family: 'Montserrat', sans-serif;
+   }
+
+   #rating-card {
+       padding-top: 1.875rem;
+   }
+
+   #rating-card h6 {
+       font-weight: bold;
+   }
+
+   #rating-headline {
+       font-weight: 600;
+   }
+
+   @media only screen and (max-width:760px) {
+       #rating-card {
+           padding: 1.125rem 1.5rem;
+       }
+   }
+
+   /***** DOC PROFILE ******/
+   #doc-profile {
+       column-gap: 80px;
+
+   }
+
+   #doc-profile-card {
+       display: flex;
+       flex-direction: column;
+
+   }
+
+   #doc-profile-card div {
+       border: none;
+   }
+
+   #doc-profile-title {
+       font-family: 'Montserrat', sans-serif;
+       font-weight: bolder;
+   }
+
+   #doc-profile-text h5 {
+       font-weight: bold;
+       font-family: 'Montserrat', sans-serif;
+   }
+
+   @media only screen and (max-width:760px) {
+       #doc-profile-img img {
+           height: 25rem;
+           width: 21.875rem;
+           display: block;
+           margin: auto;
+       }
+   }
+
+   /***** HELP TODAY ******/
+
+   #help {
+       color: white;
+       font-family: 'Montserrat', sans-serif;
+
+   }
+
+   #help-content {
+       background-color: cadetblue;
+   }
+
+   #help-img {
+       padding: 0px 0px !important;
+   }
+
+   #help-text {
+       background-color: #FB6F55;
+       text-align: center;
+       font-size: large;
+       width: 100%;
+   }
+
+   #help-text p {
+       width: 50%;
+       margin: 1.25rem auto;
+   }
+
+   #help-content-col a {
+       text-decoration: none;
+       display: table;
+       padding-top: 1rem;
+       font-size: medium;
+       padding-left: 2.75rem;
+       color: white;
+   }
+
+   #help-content-title {
+       padding-top: 1.25rem;
+       /* padding-bottom: 1rem; */
+       font-size: xx-large;
+       font-weight: 900;
+   }
+
+   @media only screen and (max-width:1000px) {
+       #help-text p {
+           width: 70%;
+           font-size: 0.9375rem;
+       }
+
+   }
+
+
+   /***** FOOTER ******/
+
+   #footer {
+       /* padding: 0px 2px; */
+       font-family: 'Montserrat', sans-serif;
+   }
+
+   #footer-icon svg {
+       margin-left: 1.25rem;
+   }
+
+   #footer-row {
+       margin-left: auto;
+       padding-left: 1.875rem;
+
+   }
+
+   #footer-row h5 {
+       padding-bottom: 0.875rem;
+       font-weight: 600;
+   }
+
+   @media only screen and (max-width:1000px) {
+       #footer {
+           font-size: 0.875rem;
+       }
+   }
+
+   /***** MEDIA QUEARY ******/
+   @media only screen and (max-width:480px) {
+
+       html,
+       body {
+           width: 100%;
+           height: 100%;
+           margin: 0;
+           padding: 0;
+           overflow-x: hidden;
+       }
+   }
+
+   @media only screen and (max-width:480px) {
+   
+    #health-service-title h1{
+        margin-top: 1.5rem;
+        margin-bottom: -1.875rem;
+    }
+    #health-service-cards img{
+        width: 6rem;
+        margin: auto;
+        padding-top: 0.00625rem;
+        padding-bottom: 0.00625rem;
+        
+    }
+    
+    #health-service-cards{
+        font-size:smaller;
+        margin: 0;
+        padding: 0;
+    }
+    #health-service-cards h5{
+        font-size:medium;
+    }
+
+    #how-it-works-bg h2 {
+        padding-top: 0.625rem;
+    }
+    #rating-card{
+        padding: 0.625rem 2.5rem;   
+    }
+    #rating-text{
+        padding-top: .875rem;
+    }
+    #doc-profile{
+        padding: 1.25rem 0;
+    }
+    #doc-profile-title h1{
+        font-size: 1.25rem;
+        font-weight: 800;
+    }
+    #doc-profile-img{
+        height: 12.5rem;
+        width: 10rem;
+        object-fit: contain;
+        margin: auto;   
+    }
+    #help-content-col a{
+        font-size: 0.75rem;
+    }
+    #help-text p{
+        font-size: 0.75rem;
+    }
+    #footer li{
+        font-size: 0.75rem;
+    }
+    #footer img{
+        height: 3.125rem;
+        width: 7.5rem;
+        padding-left: 1.25rem;
+    }
+    #footer-row h5{
+        font-size: 0.85rem;
+    }
+
+   }
+
+   @media only screen and (max-width:1800px) {
+
+       html,
+       body {
+           width: 100%;
+           height: 100%;
+           margin: 0;
+           padding: 0;
+           overflow-x: hidden;
+       }
+   }
+
+
+   #carousel-caption-1 {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    color: darkcyan;
+}
+
+#carousel-caption-2 {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
